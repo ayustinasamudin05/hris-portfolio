@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HRIS Portfolio
+
+A web-based Human Resource Information System (HRIS) portfolio project built to demonstrate the design and implementation of employee management workflows, user authentication, role-based access, and database integration.
+
+## Overview
+
+HRIS Portfolio is a web application developed to organize employee-related information and support essential human resource administration processes. This project focuses on structured data management, access control, and maintainable application architecture.
+
+## Features
+
+- **Authentication** — Login and logout functionality.
+- **Dashboard** — Central entry point for application activities.
+- **Department Management** — Manage department-related information.
+- **Position Management** — Manage employee position data.
+- **Employee Management** — Organize employee records.
+- **User Management** — Manage application user accounts.
+- **My Profile** — View personal profile information.
+- **My Attendance** — Access the attendance section.
+- **Role-Based Access Control** — Apply access restrictions based on user roles.
+
+> Note: Feature availability and access permissions depend on the current implementation.
+
+## Tech Stack
+
+- **Frontend & Application Framework:** Next.js, React, TypeScript
+- **Database:** MariaDB
+- **ORM:** Prisma
+- **Authentication & Security:** bcryptjs for password hashing
+- **Development Environment:** Node.js and XAMPP
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure the following tools are installed:
+
+- Node.js and npm
+- Git
+- XAMPP with MariaDB/MySQL
+- A code editor such as Visual Studio Code
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ayustinasamudin05/hris-portfolio.git
+cd hris-portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env` file in the project root. Configure the database connection and other environment variables required by the application.
+
+Do not commit `.env` or any file containing real credentials to GitHub.
+
+### 4. Configure the database
+
+Start the database service through XAMPP and create the database configured for this project.
+
+Configure Prisma according to the project's existing schema and migration setup. Apply the migrations using the appropriate Prisma command for the installed version.
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+hris-portfolio/
+├── app/              # Application routes and pages
+├── components/       # Reusable UI components, if applicable
+├── lib/              # Shared utilities and application logic
+├── prisma/           # Database schema, migrations, and seed script
+├── public/            # Static assets
+├── package.json       # Dependencies and scripts
+└── README.md          # Project documentation
+```
 
-## Learn More
+The exact contents may evolve as development continues.
 
-To learn more about Next.js, take a look at the following resources:
+## Security Considerations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Passwords should be stored as hashes, not plaintext.
+- Environment variables should be used for sensitive configuration.
+- Access to employee information should be restricted according to user roles.
+- Production deployment should include appropriate authentication, authorization, and input validation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Status
 
-## Deploy on Vercel
+This project is under active development as a programming portfolio project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ayustina Samudin**
+
+- GitHub: [@ayustinasamudin05](https://github.com/ayustinasamudin05)
+- Repository: [hris-portfolio](https://github.com/ayustinasamudin05/hris-portfolio)
